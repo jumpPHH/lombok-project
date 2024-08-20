@@ -15,7 +15,7 @@ import static com.lombok.lombok_project.domain.type.StatusCode.WORKING;
 class LombokProjectApplicationTests {
 
 	@Test
-	void setterTest() {
+	void setterTest() { // @Setter
 		Developer developer = new Developer();
 
 		developer.setName("test");
@@ -32,7 +32,7 @@ class LombokProjectApplicationTests {
 	}
 
 	@Test
-	void getterTest() {
+	void getterTest() { // @Getter
 		Developer developer = Developer.builder()
 				.name("Lombok")
 				.memberId("developer0001")
@@ -56,7 +56,7 @@ class LombokProjectApplicationTests {
 	}
 
 	@Test
-	void builderTest() {
+	void builderTest() { // @Builder
 		Developer developer = Developer.builder()
 				.name("Lombok")
 				.memberId("developer0001")
@@ -72,7 +72,7 @@ class LombokProjectApplicationTests {
 	}
 
 	@Test
-	void toStringTest() {
+	void toStringTest() { // @ToString
 		Developer developer = Developer.builder()
 				.name("Lombok")
 				.memberId("developer0001")
@@ -88,7 +88,7 @@ class LombokProjectApplicationTests {
 	}
 
 	@Test
-	void allArgsConstructorTest(){
+	void allArgsConstructorTest(){ // @AllArgsConstructor
 		LocalDateTime createdAt = LocalDateTime.now();
 		LocalDateTime updatedAt = LocalDateTime.now();
 
@@ -98,7 +98,7 @@ class LombokProjectApplicationTests {
 	}
 
 	@Test
-	void noArgsConstructorTest() {
+	void noArgsConstructorTest() { // @NoArgsConstructor
 		Developer developer = new Developer();
 
         System.out.println(developer);
